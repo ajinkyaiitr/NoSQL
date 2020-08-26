@@ -1,0 +1,33 @@
+!Basically, if we have to handle higher computing load and we choose to upgrade the hardware, we call it vertical scaling or scaling up.
+!But if we choose to move to a distributed architecture and add more computers to solve our problem we call it horizontal scaling or scaling out.
+!NoSQL databases are needed when we want to horizontally scale.
+ACID - Another term that we frequently use while talking about relational databases is ACID properties of the database.
+ACID is an acronym of Atomicity, Consistency, Isolation and Durablity.
+Atomicity means transaction either completes or fails in entirety. There is no state in between. No body sees a partial completion of a transaction.
+Consistency means the transaction leaves the database in the valid state.
+Isolation means no two transactions mingle or interfere with each other. The result of two transactions executed in parallel would be same as sequential execution.
+Durability means the changes of the transaction are saved. It remains there even if power is turned off.
+Every relational database such as MySQL, postgresql, oracle and microsoft sql guarantees ACID properties of transaction.
+What Is a NoSQL Datastore?
+
+It is a datastore that store and handle really big data and it provides High availability - which means serving to many concurrent users.
+NoSQL achieves this with scale out architectures which means we can have many machines and these machines can be commodity hardware. Every NoSQL supports the addition of hardware whenever needed.
+The other properties of NoSQL data store is that they are non-relational meaning they don't guarantee ACID properties and don't to adhere to a fixed schema.
+All of the NoSQL datastores available in market at open source? Why? To avoid vendor lockins, the users prefer open source data store.
+Every NoSql stores records. Based on the type of record a NoSQL can store, it is classified into four categories: First one is Column Oriented or Wide Column
+These are very close to relational databases. They have tabular structure. Examples of such databases are HBASE,Cassandra and accumulo.
+The second kind is Document oriented NoSQL datastores. In such data stores, we can store complex objects. For example, we can store TVShows into such datastores where each record would represent a tv show. The TV show is a complex object or we can say document. TV Show has many seasons, each search has many episodes. Every episode has many reviews and cast members.
+Examples of Document oriented NoSQL datastores are MongoDB, couchbase, clusterpoint and marklogic.
+The Third kind of NoSQL stores are key-value store. Such NoSQL store reach record in the form of key-value. Key and Value can be primitives such as string, byte array, number or boolean. Key-Value stores are most primitive and the first datastores to be invented.
+The examples of key-value stores are: Amazon dynamo, memcachedb, voldemort, redis and riak.
+The fourth category of NoSQL datastores is Graph Oriented data stores. These are the most recent kind of datastores.
+Such NoSQLs are used for storing graphs. A graph is made up complex relations between objects for example on Facebook relations between people.
+Allegro, neo4j, orient db, virtuoso and giraph are examples of NoSQLs.
+
+1)It is very important to understand the limitations of NoSQL database. NoSQL can not provide consistency and high availability together. This was first expressed by Eric Brewer in CAP Theorem.
+2)CAP theorem or Eric Brewers theorem states that we can only achieve at most two out of three guarantees for a database: Consistency, Availability and Partition Tolerance
+
+Serialization is a process of converting objects into an array of bytes.
+
+The process of constructing objects from a sequence of bytes is called de-serialization
+
